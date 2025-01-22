@@ -20,7 +20,8 @@ def get_word_with_letter(random_letter):
     word = input(f"введите слово на букву '{random_letter}':")
     if word[0].upper() == random_letter:
         return word
-    print(f"Слово должно начинаться на '{random_letter}'. Попробуйте снова")
+    else:
+        print(f"Слово должно начинаться на '{random_letter}'. Попробуйте снова")
 
 
 def calculate_score(word):
@@ -46,6 +47,8 @@ def main():
     print(f"Игрок 2 ввел слово '{word2}' и набрал {sum_scores2} очков.")
     if sum_scores1 > sum_scores2:
         print("Игрок 1 победил!")
+    elif sum_scores1 == sum_scores2:
+        print("Выиграла ничья!")
     else:
         print("Игрок 2 победил!")
 
