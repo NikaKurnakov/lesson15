@@ -18,10 +18,10 @@ def get_random_letter():
 
 def get_word_with_letter(random_letter):
     word = input(f"введите слово на букву '{random_letter}':")
-    if word[0].upper() == random_letter:
-        return word
-    else:
+    while word[0].upper() != random_letter:
         print(f"Слово должно начинаться на '{random_letter}'. Попробуйте снова")
+        word = input(f"введите слово на букву '{random_letter}':")
+    return word
 
 
 def calculate_score(word):
